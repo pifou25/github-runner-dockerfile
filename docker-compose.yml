@@ -9,11 +9,11 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     deploy:
       mode: replicated
-      replicas: 4
-      resources:
-        reservations:
-          cpus: 0.5
-          memory: 1024M
+      replicas: 2
+      #resources:
+      #  reservations:
+      #    cpus: 0.5
+      #    memory: 1024M
   cache:
     image: ghcr.io/falcondev-oss/github-actions-cache-server:latest
     restart: unless-stopped
