@@ -1,6 +1,10 @@
 services:
   runner:
-    build: .
+    build:
+      context: .
+      args:
+        RUNNER_VERSION: 2.329.0
+        ARCH: arm
     restart: unless-stopped
     networks:
       - backend
